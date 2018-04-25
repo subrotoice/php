@@ -1,3 +1,15 @@
+// sql to create table
+$sql = "CREATE TABLE student (
+id INT(6) AUTO_INCREMENT PRIMARY KEY,
+firstname VARCHAR(30) NOT NULL,
+lastname VARCHAR(30) NOT NULL,
+reg_date TIMESTAMP
+)";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Table student created successfully";
+}
+
 // Show Data
 $conn = new mysqli('localhost', 'root', '', 'ictap');
 $sql= "SELECT * FROM student";
