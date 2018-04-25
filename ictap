@@ -1,4 +1,13 @@
- $conn = new mysqli('localhost', 'root', '', 'ictap');
- $sql= "SELECT * FROM student";
- $result = $conn->query($sql);
- $row = $result->fetch_assoc();
+// Show Data
+$conn = new mysqli('localhost', 'root', '', 'ictap');
+$sql= "SELECT * FROM student";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+
+// Insert Data
+$sql = "insert into student (name, age) values ('$_GET[name]', '$_GET[age]')";
+$conn->query($sql);
+
+// Delete
+$sql = "delete from student where age=44";
+$conn->query($sql);
