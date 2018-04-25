@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Insert and Show</title>
+</head>
+<body>
+<?php 
+if(isset($_GET['name'])){
+echo "Submitted";
+//var_dump($_GET);
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+// Create connection
+$conn = mysql_connect($servername, $username, $password);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+}
+?>
+<form action="index.php" method="get" >
+<input type="text" name="name" placeholder="name">
+<input type="text" name="age" placeholder="age">
+<input type="submit" value="Submit Here">
+</form>
+</body>
+</html>
