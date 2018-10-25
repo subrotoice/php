@@ -1,0 +1,17 @@
+IF you want to config first----
+git config --global user.name "subrotoice"
+git config --global user.email "subroto.iu@gmail.com"
+
+IF you config on demand-------
+git config user.name "subrotoice"
+git config user.email "subroto.iu@gmail.com"
+
+git clone https://github.com/subrotoice/git-test.git
+git add -A
+git status
+git checkout -b my-branch
+git push -u origin master  // can be master / my-branch
+
+
+https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
+https://www.youtube.com/watch?v=rgbCcBNZcdQ
